@@ -33,8 +33,8 @@ testX, testY = test
 trainX = pad_sequences(trainX, maxlen=100, value=0.)
 testX = pad_sequences(testX, maxlen=100, value=0.)
 # Converting labels to binary vectors
-trainY = to_categorical(trainY)
-testY = to_categorical(testY)
+trainY = to_categorical(trainY, None)
+testY = to_categorical(testY, None)
 
 # Network building
 net = tflearn.input_data([None, 100])
